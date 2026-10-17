@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio with Grid</title>
+    <style>
+        body {
+            background: #F9E6FF;
+        }
+        #container {
+            width: 512px;
+            height: 512px;
+            background: white;
+            border: 1px solid dimgray;
+            margin: 24px auto;
+            display: grid;
+            grid-template: 1fr 1fr / 1fr 1fr;
+        }
+        #container div {
+            font: 72pt/1.4em Candara;
+        }
+        #container div:nth-child(1) {
+            background: lightblue;
+        }
+        #container div:nth-child(2) {
+            background: lightgreen;
+            grid-area: 1/2/3/3;
+        }
+        #container div:nth-child(3) {
+            background: lavender;
+        }
+        #container div img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div><img src="one.jpg" alt="Image 1"></div>
+        <div><img src="two.jpg" alt="Image 2"></div>
+        <div><img src="three.jpg" alt="Image 3"></div>
+    </div>
+</body>
+</html>
